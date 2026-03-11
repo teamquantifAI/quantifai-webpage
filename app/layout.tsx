@@ -5,13 +5,14 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'quantifAI - AI-Powered Portfolio Optimization',
-  description: 'AI-powered portfolio insights for financial advisors. Deliver smarter, more transparent investment decisions with alternative asset analysis.',
-  keywords: 'AI, portfolio optimization, financial advisors, investment analysis, alternative assets, cryptocurrency, quantitative finance',
+  metadataBase: new URL('https://quantifai.co'),
+  title: 'quantifAI — AI-Powered Sports Predictive Intelligence',
+  description: 'Six AI layers. 95,000 games. Statistically proven edge. quantifAI fuses ML ensembles, live market odds, news sentiment, weather data, and Gemini AI into calibrated sports predictions.',
+  keywords: 'sports prediction, AI forecasting, sports betting analytics, machine learning sports, Brier score, quantitative sports analysis, NFL predictions, NBA predictions, soccer predictions, MLB predictions',
   authors: [{ name: 'quantifAI Team' }],
   openGraph: {
-    title: 'quantifAI - AI-Powered Portfolio Optimization',
-    description: 'Transform your financial advisory practice with AI-powered portfolio insights.',
+    title: 'quantifAI — AI-Powered Sports Predictive Intelligence',
+    description: 'Six AI layers. 95,000 games. Statistically proven edge against the betting market.',
     url: 'https://quantifai.co',
     siteName: 'quantifAI',
     locale: 'en_US',
@@ -21,14 +22,14 @@ export const metadata: Metadata = {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'quantifAI - AI-Powered Portfolio Optimization',
+        alt: 'quantifAI — Predictive Intelligence for Sports',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'quantifAI - AI-Powered Portfolio Optimization',
-    description: 'Transform your financial advisory practice with AI-powered portfolio insights.',
+    title: 'quantifAI — AI-Powered Sports Predictive Intelligence',
+    description: 'Six AI layers. 95,000 games. Statistically proven edge against the betting market.',
     images: ['/images/og-image.jpg'],
   },
   robots: {
@@ -41,9 +42,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  verification: {
-    google: 'verification-token',
   },
 }
 
@@ -62,7 +60,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#fbbf24" />
       </head>
       <body className={`${inter.className} antialiased`}>
-        <div className="relative min-h-screen bg-gradient-to-br from-white via-yellow-50/30 to-amber-100/20">
+        <div className="relative min-h-screen">
           {children}
         </div>
       </body>

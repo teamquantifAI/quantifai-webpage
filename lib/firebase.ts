@@ -14,21 +14,19 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 }
 
-// Initialize Firebase (avoid re-initialization in development)
-const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp()
+const isConfigured = !!firebaseConfig.projectId
 
-// Initialize Firestore
-export const db = getFirestore(app)
+// Initialize Firebase only when config is present
+const app = isConfigured
+  ? getApps().length === 0 ? initializeApp(firebaseConfig) : getApp()
+  : null
 
-// Initialize Analytics (only on client-side and if supported)
+export const db = app ? getFirestore(app) : null
+
 export const initializeAnalytics = async () => {
-  if (typeof window !== 'undefined') {
-    const supported = await isSupported()
-    if (supported) {
-      return getAnalytics(app)
-    }
-  }
-  return null
+  if (!app || typeof window === 'undefined') return null
+  const supported = await isSupported()
+  return supported ? getAnalytics(app) : null
 }
 
 export default app

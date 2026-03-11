@@ -1,9 +1,11 @@
 import React from 'react'
 import Header from '@/components/Header'
 import HeroSection from '@/components/HeroSection'
-import ServicesSection from '@/components/ServicesSection'
-import WhyQuantifAISection from '@/components/WhyQuantifAISection'
+import ProblemSection from '@/components/ProblemSection'
+import HowItWorksSection from '@/components/HowItWorksSection'
 import DashboardSection from '@/components/DashboardSection'
+import ProofSection from '@/components/ProofSection'
+import PulseGridSection from '@/components/PulseGridSection'
 import ContactFormSection from '@/components/ContactFormSection'
 import CTASection from '@/components/CTASection'
 import Footer from '@/components/Footer'
@@ -14,9 +16,11 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <ServicesSection />
-        <WhyQuantifAISection />
+        <ProblemSection />
+        <HowItWorksSection />
         <DashboardSection />
+        <ProofSection />
+        <PulseGridSection />
         <ContactFormSection />
         <CTASection />
       </main>
