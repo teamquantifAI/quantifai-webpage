@@ -118,13 +118,12 @@ const ProofSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14"
+            className="grid grid-cols-3 gap-4 mb-14"
           >
             {[
               { value: '95,146', label: 'Total Games Analyzed' },
               { value: '13,941', label: 'Test Games' },
               { value: '4', label: 'Sports' },
-              { value: '2', label: 'Beat the Market' },
             ].map((s, i) => (
               <motion.div
                 key={s.label}
