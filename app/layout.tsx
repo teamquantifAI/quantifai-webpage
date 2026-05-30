@@ -1,18 +1,39 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Hanken_Grotesk, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const hanken = Hanken_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-hanken',
+  display: 'swap',
+})
+
+const jetbrains = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-jetbrains',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://quantifai.co'),
-  title: 'quantifAI — AI-Powered Sports Predictive Intelligence',
-  description: 'Six AI layers. 95,000 games. Statistically proven edge. quantifAI fuses ML ensembles, live market odds, news sentiment, weather data, and Gemini AI into calibrated sports predictions.',
-  keywords: 'sports prediction, AI forecasting, sports betting analytics, machine learning sports, Brier score, quantitative sports analysis, NFL predictions, NBA predictions, soccer predictions, MLB predictions',
+  title: 'quantifAI — Build, Evaluate, and Ship ML Models You Can Trust',
+  description:
+    'The AI writes the code, you bring the understanding. quantifAI walks you from raw data to a model you can actually explain — with honest evaluation that flags leakage and fake accuracy.',
+  keywords:
+    'no-code machine learning, ML model builder, model evaluation, data leakage detection, AI model trust, explainable AI, honest ML evaluation, baseline comparison, feature importance, AutoML',
   authors: [{ name: 'quantifAI Team' }],
   openGraph: {
-    title: 'quantifAI — AI-Powered Sports Predictive Intelligence',
-    description: 'Six AI layers. 95,000 games. Statistically proven edge against the betting market.',
+    title: 'quantifAI — Build, Evaluate, and Ship ML Models You Can Trust',
+    description:
+      'The AI writes the code, you bring the understanding. From raw data to a model you can actually explain — with honest evaluation built in.',
     url: 'https://quantifai.co',
     siteName: 'quantifAI',
     locale: 'en_US',
@@ -22,14 +43,15 @@ export const metadata: Metadata = {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'quantifAI — Predictive Intelligence for Sports',
+        alt: 'quantifAI — Build, Evaluate, and Ship ML Models You Can Trust',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'quantifAI — AI-Powered Sports Predictive Intelligence',
-    description: 'Six AI layers. 95,000 games. Statistically proven edge against the betting market.',
+    title: 'quantifAI — Build, Evaluate, and Ship ML Models You Can Trust',
+    description:
+      'From raw data to a model you can actually explain — with honest evaluation that flags leakage and fake accuracy.',
     images: ['/images/og-image.jpg'],
   },
   robots: {
@@ -51,15 +73,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html
+      lang="en"
+      className={`scroll-smooth ${inter.variable} ${hanken.variable} ${jetbrains.variable}`}
+    >
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#fbbf24" />
+        <meta name="theme-color" content="#ffbf00" />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} bg-cream text-ink antialiased`}>
         <div className="relative min-h-screen">
           {children}
         </div>

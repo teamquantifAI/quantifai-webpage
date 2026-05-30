@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Layers, BarChart3, Shield, Mail, Menu, X } from 'lucide-react'
+import { Menu, X, ArrowRight } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Header = () => {
@@ -29,10 +29,9 @@ const Header = () => {
   }, [mobileMenuOpen])
 
   const navItems = [
-    { name: 'How It Works', href: '#how-it-works', icon: Layers },
-    { name: 'Proof', href: '#proof', icon: BarChart3 },
-    { name: 'Sports', href: '#sports', icon: Shield },
-    { name: 'Contact', href: '#contact', icon: Mail },
+    { name: 'The Problem', href: '#problem' },
+    { name: 'The Workflow', href: '#workflow' },
+    { name: 'Demo', href: '#demo' },
   ]
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -56,70 +55,69 @@ const Header = () => {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
+      transition={{ duration: 0.7, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-lg shadow-lg border-b border-yellow-100'
-          : 'bg-white/80 backdrop-blur-sm'
+          ? 'glass-strong shadow-soft'
+          : 'bg-cream/70 backdrop-blur-sm border-b border-transparent'
       }`}
     >
-      <div className="container mx-auto px-6">
+      <div className="mx-auto max-w-layout px-4 sm:px-6 lg:px-16">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Logo + tagline */}
           <Link href="/" onClick={handleScrollToTop} className="flex items-center space-x-3 group">
-            <div className="relative">
-              <img
-                src="/images/logo.svg"
-                alt="quantifAI Logo"
-                width={48}
-                height={48}
-                className="w-12 h-12 group-hover:scale-105 transition-all duration-300"
-              />
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-2xl font-bold text-black">quantif</span>
-              <span className="text-2xl font-bold gradient-text">AI</span>
+            <img
+              src="/images/logo.svg"
+              alt="quantifAI logo"
+              width={40}
+              height={40}
+              className="w-10 h-10 group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="leading-none">
+              <div className="text-xl font-display font-extrabold tracking-tight text-ink">
+                quantif<span className="text-brand-deep">AI</span>
+              </div>
+              <div className="hidden sm:block label-caps text-[10px] text-ink-soft mt-0.5">
+                Build ML You Can Trust
+              </div>
             </div>
           </Link>
 
-          {/* Nav + CTA */}
-          <div className="flex items-center space-x-3 sm:space-x-6">
-            {/* Desktop nav */}
-            <nav className="hidden md:flex items-center space-x-1">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={(e) => handleSmoothScroll(e, item.href)}
-                  className="group flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-amber-600 transition-all duration-300 hover:bg-amber-50 cursor-pointer"
-                >
-                  <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                  <span>{item.name}</span>
-                </a>
-              ))}
-            </nav>
+          {/* Desktop nav */}
+          <nav className="hidden md:flex items-center gap-1">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={(e) => handleSmoothScroll(e, item.href)}
+                className="px-4 py-2 rounded-lg text-sm font-medium text-ink-soft hover:text-brand-deep hover:bg-surface-low transition-all duration-200 cursor-pointer"
+              >
+                {item.name}
+              </a>
+            ))}
+          </nav>
 
-            {/* Auth buttons */}
-            <div className="hidden md:flex items-center space-x-3">
-              <Link
-                href="https://app.quantifai.co/login"
-                className="inline-flex items-center px-5 py-2 border border-gray-200 text-gray-700 font-semibold rounded-full hover:bg-gray-50 hover:border-yellow-300 transition-all duration-300"
-              >
-                Log In
-              </Link>
-              <Link
-                href="https://app.quantifai.co/signup"
-                className="inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-              >
-                Sign Up
-              </Link>
-            </div>
+          {/* Right actions */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Link
+              href="https://app.quantifai.co/login"
+              className="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold text-ink-soft hover:text-ink transition-colors duration-200"
+            >
+              Log In
+            </Link>
+            <Link
+              href="https://app.quantifai.co/signup"
+              className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-brand text-ink font-bold text-sm rounded-full shadow-glow hover:shadow-glow-lg hover:scale-[1.03] transition-all duration-300"
+            >
+              Start Building
+              <ArrowRight className="w-4 h-4" />
+            </Link>
 
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-              aria-label="Toggle mobile menu"
+              className="md:hidden p-2 rounded-lg text-ink hover:bg-surface-low transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand"
+              aria-label="Toggle menu"
             >
               <AnimatePresence mode="wait">
                 {mobileMenuOpen ? (
@@ -145,10 +143,10 @@ const Header = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="md:hidden overflow-hidden border-t border-gray-100"
+            className="md:hidden overflow-hidden border-t border-outline-soft/50"
           >
-            <div className="bg-white/95 backdrop-blur-lg shadow-lg">
-              <nav className="container mx-auto px-6 py-4 space-y-2">
+            <div className="glass-strong">
+              <nav className="mx-auto max-w-layout px-6 py-4 space-y-1">
                 {navItems.map((item, index) => (
                   <motion.a
                     key={item.name}
@@ -156,34 +154,28 @@ const Header = () => {
                     onClick={(e) => handleSmoothScroll(e, item.href)}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-yellow-50 hover:text-amber-600 transition-all duration-200 cursor-pointer"
+                    transition={{ delay: index * 0.08 }}
+                    className="block px-4 py-3 rounded-lg font-medium text-ink-soft hover:bg-surface-low hover:text-brand-deep transition-all duration-200 cursor-pointer"
                   >
-                    <item.icon className="w-5 h-5" />
-                    <span className="font-medium">{item.name}</span>
+                    {item.name}
                   </motion.a>
                 ))}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: navItems.length * 0.1 }}
-                  className="pt-3 pb-2 space-y-3"
-                >
+                <div className="pt-3 pb-2 space-y-3">
                   <Link
                     href="https://app.quantifai.co/login"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block w-full text-center px-6 py-3 border border-gray-200 text-gray-700 font-semibold rounded-full hover:bg-gray-50 hover:border-yellow-300 transition-all duration-300"
+                    className="block w-full text-center px-6 py-3 border border-outline-soft text-ink font-semibold rounded-full hover:bg-surface-low transition-all duration-300"
                   >
                     Log In
                   </Link>
                   <Link
                     href="https://app.quantifai.co/signup"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block w-full text-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black font-semibold rounded-full shadow-lg transition-all duration-300"
+                    className="block w-full text-center px-6 py-3 bg-brand text-ink font-bold rounded-full shadow-glow transition-all duration-300"
                   >
-                    Sign Up
+                    Start Building
                   </Link>
-                </motion.div>
+                </div>
               </nav>
             </div>
           </motion.div>

@@ -2,29 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+/* Fonts are loaded via next/font (Hanken Grotesk, Inter, JetBrains Mono) in app/layout.tsx */
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
+  --background: 40 60% 98%;        /* cream #fdfbf7 */
+  --foreground: 39 30% 9%;         /* ink #201b11 */
   --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --primary: 47 96% 53%;
-  --primary-foreground: 26 83% 14%;
-  --secondary: 210 40% 96%;
-  --secondary-foreground: 222.2 84% 4.9%;
-  --muted: 210 40% 96%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 210 40% 96%;
-  --accent-foreground: 222.2 84% 4.9%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 47 96% 53%;
+  --card-foreground: 39 30% 9%;
+  --primary: 45 100% 50%;          /* brand #ffbf00 */
+  --primary-foreground: 39 100% 18%;
+  --secondary: 222 15% 39%;        /* slate-q */
+  --secondary-foreground: 0 0% 100%;
+  --muted: 35 45% 92%;
+  --muted-foreground: 34 18% 26%;  /* ink-soft */
+  --accent: 45 100% 50%;
+  --accent-foreground: 39 100% 18%;
+  --border: 38 35% 75%;            /* outline-soft */
+  --input: 38 35% 75%;
+  --ring: 45 100% 50%;
   --radius: 0.5rem;
-}
-
-* {
-  border-color: hsl(var(--border));
 }
 
 html {
@@ -34,174 +30,85 @@ html {
 body {
   color: hsl(var(--foreground));
   background: hsl(var(--background));
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* ── Brand gradient text ──────────────────────────────── */
+/* ── Brand gradient text (Intellectual Amber) ─────────── */
 .gradient-text {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+  background: linear-gradient(135deg, #ffbf00 0%, #ecc165 55%, #5c4300 130%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.gradient-text-white {
-  background: linear-gradient(135deg, #ffffff 0%, #fef3c7 50%, #fde68a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* Underline-highlight used on hero ("You Can Trust.") */
+.brand-underline {
+  background-image: linear-gradient(transparent 70%, rgba(255, 191, 0, 0.55) 70%);
 }
 
-/* ── Glass effects ────────────────────────────────────── */
-.glass-effect {
-  background: rgba(255, 255, 255, 0.08);
+/* ── Glassmorphism (backdrop-blur 12px, 80% white, thin amber border) ── */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 191, 0, 0.10);
 }
 
-.glass-effect-light {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+.glass-strong {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(128, 118, 101, 0.18);
 }
 
-/* ── Ticker animations for PulseGrid ─────────────────── */
-@keyframes ticker-scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/* ── Technical mono label (uppercase, tracked) ────────── */
+.label-caps {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
-@keyframes ticker-scroll-right {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
+/* ── Live / Beta status pulse ─────────────────────────── */
+.status-dot {
+  position: relative;
 }
-
-.ticker-left {
-  animation: ticker-scroll-left 40s linear infinite;
-}
-
-.ticker-right {
-  animation: ticker-scroll-right 45s linear infinite;
-}
-
-.ticker-left-slow {
-  animation: ticker-scroll-left 55s linear infinite;
-}
-
-.ticker-right-slow {
-  animation: ticker-scroll-right 50s linear infinite;
-}
-
-.ticker-strip:hover .ticker-left,
-.ticker-strip:hover .ticker-right,
-.ticker-strip:hover .ticker-left-slow,
-.ticker-strip:hover .ticker-right-slow {
-  animation-play-state: paused;
-}
-
-/* ── Probability gauge ────────────────────────────────── */
-@keyframes gauge-fill {
-  0% { stroke-dashoffset: 251.33; }
-}
-
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.05); }
-}
-
-.gauge-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
-}
-
-/* ── Pipeline connector line ──────────────────────────── */
-@keyframes flow-down {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 40px; }
-}
-
-.pipeline-line {
-  background: repeating-linear-gradient(
-    180deg,
-    #fbbf24 0px,
-    #fbbf24 8px,
-    transparent 8px,
-    transparent 16px
-  );
-  background-size: 2px 16px;
-  animation: flow-down 1.5s linear infinite;
-}
-
-/* ── Signal dot pulse ─────────────────────────────────── */
-@keyframes signal-pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.8); opacity: 0; }
-}
-
-.signal-dot::after {
+.status-dot::after {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: 9999px;
   background: inherit;
-  animation: signal-pulse 2s ease-out infinite;
+  animation: pulseRing 2s ease-out infinite;
+}
+@keyframes pulseRing {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  70%, 100% { transform: scale(2.4); opacity: 0; }
 }
 
-/* ── Feature card hover ───────────────────────────────── */
-.feature-card {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* ── Soft warm grid backdrop ──────────────────────────── */
+.grid-warm {
+  background-image:
+    linear-gradient(rgba(128, 118, 101, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(128, 118, 101, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
 }
 
-.feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 25px 50px -12px rgba(251, 191, 36, 0.15);
+/* ── Card hover lift ──────────────────────────────────── */
+.lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* ── Sport card accent borders ────────────────────────── */
-.sport-card-soccer { border-top: 3px solid #22c55e; }
-.sport-card-nfl { border-top: 3px solid #3b82f6; }
-.sport-card-nba { border-top: 3px solid #f97316; }
-.sport-card-mlb { border-top: 3px solid #ef4444; }
+.lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -12px rgba(92, 67, 0, 0.18);
+}
 
 /* ── Scrollbar ────────────────────────────────────────── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #f1f1f1; }
-::-webkit-scrollbar-thumb { background: #fbbf24; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #f59e0b; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f8ecdc; }
+::-webkit-scrollbar-thumb { background: #ecc165; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #ffbf00; }
 
-/* ── Noise texture overlay for dark sections ──────────── */
-.noise-overlay {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
-}
-
-/* ── Gradient border trick ────────────────────────────── */
-.gradient-border {
-  position: relative;
-}
-
-.gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
-/* ── Stat counter animation ───────────────────────────── */
-@keyframes count-up {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ── Dark section grid pattern ────────────────────────── */
-.grid-pattern {
-  background-image:
-    linear-gradient(rgba(251, 191, 36, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(251, 191, 36, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
+/* ── Selection ────────────────────────────────────────── */
+::selection { background: rgba(255, 191, 0, 0.3); color: #201b11; }

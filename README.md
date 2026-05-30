@@ -1,6 +1,6 @@
-# quantifAI - Portfolio Optimizer
+# quantifAI — Build, Evaluate, and Ship ML Models You Can Trust
 
-> AI-powered portfolio optimization platform for financial advisors
+> No-code ML builder — the AI writes the code, you bring the understanding. From raw data to a model you can actually explain, with honest evaluation that flags leakage and fake accuracy.
 
 [![Next.js](https://img.shields.io/badge/Next.js-14.0.4-black)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3.3-blue)](https://www.typescriptlang.org/)
@@ -10,22 +10,22 @@
 ## Features
 
 - **Modern Tech Stack**: Built with Next.js 14, TypeScript, and Tailwind CSS
-- **Redesigned UI**: Clean, modern interface with improved user experience
-- **Responsive Design**: Mobile-first approach with seamless cross-device compatibility  
+- **Scientific Modern UI**: Warm amber-and-slate palette, glassmorphism, and crisp technical typography
+- **Responsive Design**: Mobile-first approach with seamless cross-device compatibility
 - **Smooth Animations**: Framer Motion powered interactions and micro-animations
-- **AI-Powered Insights**: Transparent portfolio analysis and optimization recommendations
-- **Enterprise Security**: Built with security best practices for financial data
-- **Performance Optimized**: Fast loading times and excellent Core Web Vitals
+- **Honest Evaluation**: Surfaces leakage warnings, naive-baseline comparisons, and the real signal behind fake accuracy
+- **Firebase-backed Lead Capture**: Beta sign-ups written to Firestore
+- **Performance Optimized**: Static export, fast loading times, excellent Core Web Vitals
 
 ## What is quantifAI?
 
-quantifAI transforms how financial advisors manage and optimize client portfolios. Our AI-powered platform provides:
+quantifAI is a no-code ML builder for people who want to trust their models. The AI writes the code; you bring the understanding. The platform walks you through five guided steps:
 
-- **Transparent Portfolio Analysis**: Every trade comes with clear rationale and market insights
-- **Real-time Optimization**: AI-driven recommendations for better portfolio performance  
-- **Client Communication Tools**: Easy-to-understand visualizations and reports
-- **Alternative Asset Integration**: Comprehensive analysis including cryptocurrency and other alternatives
-- **Risk Assessment**: Advanced risk modeling and tolerance alignment
+- **Profile**: Reads your data — rows, columns, missingness
+- **Build with AI**: Describe what you want to predict; the AI writes the code
+- **Evaluate**: Holdout metrics against a naive baseline, plus leakage checks
+- **Explain**: Top feature importances and plain-language drivers
+- **Ship**: Export a validated model and predictions you can actually explain
 
 ## Quick Start
 
@@ -73,7 +73,7 @@ quantifAI transforms how financial advisors manage and optimize client portfolio
 ## Project Structure
 
 ```
-quantifai-portfolio-optimizer/
+quantifai-webpage/
 ├── app/                        # Next.js 14 app directory
 │   ├── globals.css            # Global styles with Tailwind
 │   ├── layout.tsx             # Root layout component  
@@ -93,19 +93,21 @@ quantifai-portfolio-optimizer/
 
 ## Design System
 
-### Colors
+### Colors ("Scientific Modern")
 
-- **Primary Yellow**: `#fbbf24` (Amber 400)
-- **Secondary**: `#f59e0b` (Amber 500) 
-- **Accent**: `#d97706` (Amber 600)
-- **Background**: Gradient from white to yellow-50
-- **Text**: Gray scale from 600-900
+- **Brand Amber (CTA)**: `#ffbf00` — high-visibility call-to-action
+- **Brand Deep**: `#5c4300` — amber text on light surfaces
+- **Cream Background**: `#fdfbf7` — warm, editorial base
+- **Warm Surfaces**: `#fff8f2` → `#ece1d1` tonal layers
+- **Ink / Ink-soft**: `#201b11` / `#4e4637` — text
+- **Functional Slate**: `#565e74` — labels and metadata
 
 ### Typography
 
-- **Font Family**: Inter (Google Fonts)
-- **Headings**: Bold weights (600-900) with tight tracking
-- **Body**: Regular weight (400) with relaxed line height
+- **Headlines**: Hanken Grotesk (geometric, high-impact)
+- **Body**: Inter (legible neutral sans)
+- **Technical**: JetBrains Mono (labels, tags, data points)
+- All loaded via `next/font/google` with CSS variables
 
 ### Components
 
@@ -135,13 +137,12 @@ The project uses a custom Tailwind configuration with:
 
 ## Roadmap
 
-- [ ] **Portfolio Analysis Dashboard** - Interactive charts and insights
-- [ ] **Authentication System** - Secure advisor login and management
-- [ ] **Database Integration** - Portfolio and client data storage
-- [ ] **AI API Integration** - Real portfolio analysis endpoints
-- [ ] **Client Management** - Tools for advisor-client relationships
-- [ ] **Reporting System** - Automated portfolio reports
-- [ ] **Mobile App** - React Native companion app
+- [ ] **In-browser Data Profiling** - Upload a CSV and inspect rows, columns, missingness
+- [ ] **AI Model Builder** - Describe a target; the AI writes and runs the model code
+- [ ] **Honest Evaluation Engine** - Holdout metrics, naive-baseline comparison, leakage detection
+- [ ] **Explainability View** - Feature importances and plain-language drivers
+- [ ] **Model Export / Ship** - Download validated models and predictions
+- [ ] **Account System** - Secure sign-in and saved projects
 
 ## Contributing
 

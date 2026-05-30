@@ -8,8 +8,41 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // ── QuantifAI "Scientific Modern" palette (from DESIGN.md) ──
+        // Warm surfaces
+        cream: '#fdfbf7',          // background — warmest base
+        surface: '#fff8f2',
+        'surface-dim': '#e3d9c8',
+        'surface-low': '#fef2e1',
+        'surface-container': '#f8ecdc',
+        'surface-high': '#f2e7d6',
+        'surface-highest': '#ece1d1',
+        // Text / ink
+        ink: '#201b11',            // on-surface
+        'ink-soft': '#4e4637',     // on-surface-variant
+        // Lines
+        outline: '#807665',
+        'outline-soft': '#d4c5ab',
+        // Intellectual Amber
+        brand: '#ffbf00',          // primary-container — high-visibility CTA
+        'brand-deep': '#5c4300',   // primary — amber text on light
+        'brand-ink': '#6d5000',    // on-primary-container
+        'brand-dim': '#ecc165',    // inverse-primary
+        'brand-fixed': '#ffdfa0',
+        // Functional slates
+        'slate-q': '#565e74',
+        'slate-q-container': '#d7dff9',
+        // Inverse (dark) surfaces
+        inverse: '#363025',
+        'inverse-on': '#fbefde',
+        // Status
+        'error-q': '#ba1a1a',
+        'error-soft': '#ffdad6',
+        'on-error': '#93000a',
+
+        // ── Legacy shadcn tokens (kept for compatibility) ──
         primary: {
-          DEFAULT: '#fbbf24', // amber-400 - quantifAI's signature yellow
+          DEFAULT: '#ffbf00',
           50: '#fffbeb',
           100: '#fef3c7',
           200: '#fde68a',
@@ -36,15 +69,28 @@ module.exports = {
         ring: 'hsl(var(--ring))',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Menlo', 'Monaco', 'monospace'],
+        // Hanken Grotesk → headlines, Inter → body, JetBrains Mono → technical
+        display: ['var(--font-hanken)', 'Hanken Grotesk', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-jetbrains)', 'JetBrains Mono', 'Menlo', 'Monaco', 'monospace'],
+      },
+      maxWidth: {
+        layout: '1536px',
+      },
+      boxShadow: {
+        // "Amber Glow" — primary actions + verified status cards
+        glow: '0 4px 14px 0 rgba(255, 191, 0, 0.39)',
+        'glow-lg': '0 10px 30px 0 rgba(255, 191, 0, 0.30)',
+        // Standard soft, diffused elevation
+        soft: '0 4px 20px rgba(0, 0, 0, 0.05)',
+        'soft-lg': '0 12px 40px rgba(0, 0, 0, 0.07)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
         'fade-in': 'fadeIn 0.8s ease-in-out',
         'slide-up': 'slideUp 0.8s ease-out',
         'scale-in': 'scaleIn 0.5s ease-out',
-        'gradient': 'gradient 15s ease infinite',
+        'pulse-ring': 'pulseRing 2s ease-out infinite',
       },
       keyframes: {
         float: {
@@ -63,21 +109,14 @@ module.exports = {
           '0%': { transform: 'scale(0)', opacity: '0' },
           '100%': { transform: 'scale(1)', opacity: '1' },
         },
-        gradient: {
-          '0%, 100%': {
-            'background-size': '200% 200%',
-            'background-position': 'left center'
-          },
-          '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'right center'
-          },
+        pulseRing: {
+          '0%': { transform: 'scale(0.9)', opacity: '0.7' },
+          '70%, 100%': { transform: 'scale(2.2)', opacity: '0' },
         },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'hero-pattern': 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23fbbf24" fill-opacity="0.1"%3E%3Ccircle cx="7" cy="7" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+        'grid-warm': 'linear-gradient(rgba(128,118,101,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(128,118,101,0.07) 1px, transparent 1px)',
       },
       container: {
         center: true,
@@ -85,8 +124,8 @@ module.exports = {
           DEFAULT: '1rem',
           sm: '2rem',
           lg: '4rem',
-          xl: '5rem',
-          '2xl': '6rem',
+          xl: '4rem',
+          '2xl': '4rem',
         },
       },
     },

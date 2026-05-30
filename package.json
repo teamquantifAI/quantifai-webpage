@@ -1,7 +1,7 @@
 {
-  "name": "quantifai-portfolio-optimizer",
+  "name": "quantifai-webpage",
   "version": "0.1.0",
-  "description": "AI-powered portfolio optimization platform for financial advisors",
+  "description": "quantifAI marketing site — build, evaluate, and ship ML models you can trust",
   "private": true,
   "scripts": {
     "dev": "next dev",
