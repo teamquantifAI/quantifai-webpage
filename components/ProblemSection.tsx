@@ -48,7 +48,7 @@ const ProblemSection = () => {
         </motion.div>
 
         {/* Compare cards */}
-        <div className="relative mt-14 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 max-w-5xl mx-auto">
+        <div className="relative mt-14 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 max-w-5xl mx-auto">
           {/* Without */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -72,7 +72,7 @@ const ProblemSection = () => {
           </motion.div>
 
           {/* Arrow */}
-          <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 h-11 w-11 items-center justify-center rounded-full bg-brand shadow-glow">
+          <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 h-11 w-11 items-center justify-center rounded-full bg-brand shadow-glow ring-[6px] ring-surface">
             <ArrowRight className="w-5 h-5 text-ink" />
           </div>
 
