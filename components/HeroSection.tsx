@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, AlertTriangle, ShieldCheck } from 'lucide-react'
+import { ArrowRight, AlertTriangle } from 'lucide-react'
 import Link from 'next/link'
 
 const HeroSection = () => {
@@ -29,10 +29,6 @@ const HeroSection = () => {
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-brand" />
                 </span>
                 New in Beta · No-Code ML Builder
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-q-container text-slate-q label-caps text-[11px]">
-                <ShieldCheck className="w-3.5 h-3.5" />
-                1,247 false-accuracy results caught
               </span>
             </motion.div>
 
@@ -68,12 +64,6 @@ const HeroSection = () => {
               >
                 Build Your First Model
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-              <Link
-                href="#workflow"
-                className="inline-flex items-center justify-center px-7 py-4 bg-white border border-outline-soft text-ink font-semibold rounded-lg hover:bg-surface-low transition-all duration-300"
-              >
-                Start Building Free
               </Link>
             </motion.div>
           </div>

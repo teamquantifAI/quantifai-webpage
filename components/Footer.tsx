@@ -5,9 +5,9 @@ import Link from 'next/link'
 import { Linkedin } from 'lucide-react'
 
 const productLinks = [
+  { name: 'The Problem', href: '#problem' },
+  { name: 'The Workflow', href: '#workflow' },
   { name: 'Demo', href: '#demo' },
-  { name: 'How It Works', href: '#workflow' },
-  { name: 'Proof', href: '#proof' },
 ]
 
 const legalLinks = [
