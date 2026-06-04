@@ -24,16 +24,16 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://quantifai.co'),
-  title: 'quantifAI — Build, Evaluate, and Ship ML Models You Can Trust',
+  title: 'quantifAI ML Lab — Train models on your own data, in your browser',
   description:
-    'The AI writes the code, you bring the understanding. quantifAI walks you from raw data to a model you can actually explain — with honest evaluation that flags leakage and fake accuracy.',
+    'Drop a dataset, pick what to predict, and click Train Models. ML Lab trains and evaluates models on your own machine — your data never leaves the browser. No upload, no account needed to try a run.',
   keywords:
-    'no-code machine learning, ML model builder, model evaluation, data leakage detection, AI model trust, explainable AI, honest ML evaluation, baseline comparison, feature importance, AutoML',
+    'in-browser machine learning, no-code ML, train models locally, privacy-first ML, client-side model training, no upload ML, AutoML, baseline comparison, feature importance, explainable AI',
   authors: [{ name: 'quantifAI Team' }],
   openGraph: {
-    title: 'quantifAI — Build, Evaluate, and Ship ML Models You Can Trust',
+    title: 'quantifAI ML Lab — Train models on your own data, in your browser',
     description:
-      'The AI writes the code, you bring the understanding. From raw data to a model you can actually explain — with honest evaluation built in.',
+      'Drop a dataset, pick what to predict, and read the results in a few seconds. ML Lab does the work on your own machine — nothing leaves the browser.',
     url: 'https://quantifai.co',
     siteName: 'quantifAI',
     locale: 'en_US',
@@ -43,15 +43,15 @@ export const metadata: Metadata = {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'quantifAI — Build, Evaluate, and Ship ML Models You Can Trust',
+        alt: 'quantifAI ML Lab — Train models on your own data, in your browser',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'quantifAI — Build, Evaluate, and Ship ML Models You Can Trust',
+    title: 'quantifAI ML Lab — Train models on your own data, in your browser',
     description:
-      'From raw data to a model you can actually explain — with honest evaluation that flags leakage and fake accuracy.',
+      'Train and evaluate models on your own machine. Your data never leaves the browser.',
     images: ['/images/og-image.jpg'],
   },
   robots: {

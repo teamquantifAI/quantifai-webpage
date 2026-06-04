@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ML Lab by quantifAI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ════════════════════ NAV ════════════════════ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brandmark" href="#top">
+      <img src="logo.svg" alt="quantifAI" />
+      <div>
+        <div style="display:flex;align-items:center;">
+          <span class="wordmark">quantif<span class="ai">AI</span></span>
+          <span class="product-pill">ML Lab</span>
+        </div>
+        <div class="wordmark-sub">Build ML You Can Trust</div>
+      </div>
+    </a>
+    <a class="btn btn-primary btn-sm" href="#try">
+      Open ML Lab
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- ════════════════════ HERO ════════════════════ -->
+<section class="hero band-cream grid-warm" id="top">
+  <div class="glow" style="width:40rem;height:40rem;background:rgba(255,191,0,0.16);top:-12rem;right:-6rem;"></div>
+  <div class="glow" style="width:22rem;height:22rem;background:rgba(236,193,101,0.18);top:14rem;left:-8rem;"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="chip label" style="font-size:11px;"><span class="dot"></span>Runs in your browser</span>
+        <h1>Train models on your own data, <span class="hl">without it leaving your browser.</span></h1>
+        <p class="sub">Drop a dataset, pick what to predict, and click Train Models. ML Lab does the work on your own machine and shows you the results in a few seconds.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#try">
+            Open ML Lab
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
+        </div>
+        <p class="hero-note" style="margin-top:22px;">No upload. No account needed to try a run. Your file stays on your device.</p>
+      </div>
+
+      <!-- Result preview card -->
+      <div class="card preview lift" style="z-index:1;">
+        <div class="win-head">
+          <span class="title">ml_lab · leaderboard</span>
+          <div class="dots">
+            <span style="background:#ffdad6;"></span>
+            <span style="background:var(--brand-fixed);"></span>
+            <span style="background:var(--slate-container);"></span>
+          </div>
+        </div>
+        <div class="lb-row lb-best">
+          <span class="rank">1</span>
+          <span class="name">Gradient Boosting <span class="best-tag">best</span></span>
+          <span class="bar" style="width:74px;"></span>
+          <span class="score">0.91</span>
+        </div>
+        <div class="lb-row">
+          <span class="rank">2</span>
+          <span class="name">Random Forest</span>
+          <span class="bar" style="width:68px;"></span>
+          <span class="score">0.88</span>
+        </div>
+        <div class="lb-row">
+          <span class="rank">3</span>
+          <span class="name">Logistic Regression</span>
+          <span class="bar" style="width:55px;"></span>
+          <span class="score">0.82</span>
+        </div>
+        <div class="lb-row">
+          <span class="rank">4</span>
+          <span class="name" style="color:var(--muted);">Naive baseline</span>
+          <span class="bar" style="width:34px;background:var(--slate);opacity:.5;"></span>
+          <span class="score">0.61</span>
+        </div>
+        <div style="padding:12px 16px;border-top:1px solid rgba(212,197,171,0.4);">
+          <div class="mono" style="font-size:11px;color:var(--muted);">example run · held out 20% to test · best model marked</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ HOW IT WORKS ════════════════════ -->
+<section class="section-pad band-surface" id="how">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="label eyebrow">How it works</p>
+      <h2>Four steps from a file to a result.</h2>
+      <p>There is no setup and no code to write. You stay in the browser the whole time.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <span class="num">01</span>
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m8 11 4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+        </div>
+        <h3>Drop a dataset</h3>
+        <p>Drag in a CSV or one of the other supported files. It is read right here, nothing is sent anywhere.</p>
+        <div class="step-arrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </div>
+      <div class="step reveal d1">
+        <span class="num">02</span>
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+        </div>
+        <h3>Pick a target</h3>
+        <p>Choose the column you want to predict, or let ML Lab choose. It also suggests which columns to keep.</p>
+        <div class="step-arrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </div>
+      <div class="step reveal d2">
+        <span class="num">03</span>
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg>
+        </div>
+        <h3>Train models</h3>
+        <p>One click. ML Lab works out the task type, trains a small set of models, and holds back part of the data to test them.</p>
+        <div class="step-arrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </div>
+      <div class="step reveal d3">
+        <span class="num">04</span>
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-6M22 20H2"/></svg>
+        </div>
+        <h3>Read the results</h3>
+        <p>See which model did best, how it compares to a naive baseline, the plots, the top features, and a plain read.</p>
+        <div class="step-arrow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ PRIVACY ════════════════════ -->
+<section class="section-pad band-cream" id="privacy">
+  <div class="wrap">
+    <div class="privacy-grid">
+      <div class="reveal">
+        <p class="label eyebrow">Privacy</p>
+        <h2 style="font-size:clamp(30px,4vw,42px);line-height:1.1;">Your data never leaves the device.</h2>
+        <p style="margin-top:18px;font-size:18px;color:var(--ink-soft);">The file you drop in is read and trained on inside the browser. It is not uploaded, and nothing about its contents reaches a server. There is no copy on our side because there is no transfer in the first place.</p>
+
+        <div class="privacy-points">
+          <div class="ppoint">
+            <span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></span>
+            <div>
+              <h4>It stays on your machine</h4>
+              <p>Reading the file, picking columns, and training all happen locally. The data is gone from memory when you close the tab.</p>
+            </div>
+          </div>
+          <div class="ppoint">
+            <span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <div>
+              <h4>You can check it yourself</h4>
+              <p>Open the browser network tab and start a training run. You will see no requests go out. That is the proof, not a promise.</p>
+            </div>
+          </div>
+          <div class="ppoint">
+            <span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17.5 19 7"/></svg></span>
+            <div>
+              <h4>No account to try it</h4>
+              <p>You can run on your own data without signing in. Nothing is logged about the dataset because nothing is sent.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Network panel proof -->
+      <div class="card netpanel lift reveal d1">
+        <div class="win-head">
+          <span class="title">browser devtools</span>
+          <div class="dots">
+            <span style="background:#ffdad6;"></span>
+            <span style="background:var(--brand-fixed);"></span>
+            <span style="background:var(--slate-container);"></span>
+          </div>
+        </div>
+        <div class="net-tabs">
+          <span class="net-tab">Elements</span>
+          <span class="net-tab">Console</span>
+          <span class="net-tab active">Network</span>
+          <span class="net-tab">Sources</span>
+        </div>
+        <div class="net-cols">
+          <span>Name</span><span>Status</span><span>Type</span><span>Size</span>
+        </div>
+        <div class="net-empty">
+          <div>
+            <div class="big">0 requests during training</div>
+            <div class="small">recording network activity, the list stays empty</div>
+          </div>
+        </div>
+        <div class="net-foot">
+          <span><span class="req-count">0</span> requests · 0 B transferred</span>
+          <span style="color:var(--ok);">recording</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ SPECS & LIMITS ════════════════════ -->
+<section class="section-pad band-low" id="specs">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="label eyebrow">Specs and limits</p>
+      <h2>What it reads, and where it stops.</h2>
+      <p>ML Lab runs on the CPU in your browser, so it is built for small to mid sized datasets. Here is the honest envelope.</p>
+    </div>
+
+    <div class="specs-grid">
+      <!-- Supported files -->
+      <div class="card spec-card reveal">
+        <h3>Supported files</h3>
+        <div class="fmt-list">
+          <span class="fmt">CSV</span>
+          <span class="fmt">TSV</span>
+          <span class="fmt">TXT</span>
+          <span class="fmt">JSON</span>
+          <span class="fmt">JSONL</span>
+          <span class="fmt">NDJSON</span>
+        </div>
+        <p class="fmt-note">Drop tabular data in any of these. ML Lab reads the columns and recommends which ones to keep before you train.</p>
+      </div>
+
+      <!-- Limits -->
+      <div class="card spec-card reveal d1">
+        <h3>Limits</h3>
+        <div style="margin-top:16px;">
+          <div class="limit-row"><span class="k">Compute</span><span class="v">CPU only</span></div>
+          <div class="limit-row"><span class="k">File size</span><span class="v">10 <small>MB</small></span></div>
+          <div class="limit-row"><span class="k">Rows</span><span class="v">10,000</span></div>
+          <div class="limit-row"><span class="k">Columns</span><span class="v">200</span></div>
+          <div class="limit-row"><span class="k">Model features</span><span class="v">80</span></div>
+        </div>
+      </div>
+
+      <!-- What it trains -->
+      <div class="card spec-card reveal d2">
+        <h3>What it trains</h3>
+        <p class="fmt-note" style="margin-top:16px;">ML Lab detects the task from your target column, then trains a small set of models and holds back part of the data to test them.</p>
+        <div class="model-list">
+          <div class="model-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17.5 19 7"/></svg></span><div><b style="font-family:var(--font-display);">Classification</b> <span class="mk">predict a category</span></div></div>
+          <div class="model-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17.5 19 7"/></svg></span><div><b style="font-family:var(--font-display);">Regression</b> <span class="mk">predict a number</span></div></div>
+          <div class="model-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17.5 19 7"/></svg></span><div>Every run is scored against a <b style="font-family:var(--font-display);">naive baseline</b></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ WHAT YOU GET (interactive demo) ════════════════════ -->
+<section class="section-pad band-surface" id="try">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="label eyebrow">What you get</p>
+      <h2>Run it once and read the whole picture.</h2>
+      <p>Pick a sample dataset below and train it. This demo runs the same kind of output ML Lab gives you: a leaderboard, metrics against a baseline, plots, the features that mattered, and a plain read.</p>
+    </div>
+
+    <div class="demo">
+      <!-- Control panel -->
+      <div class="card demo-panel reveal">
+        <div class="win-head">
+          <span class="title">ml_lab · new run</span>
+          <span class="label" style="font-size:9px;color:var(--muted);">demo</span>
+        </div>
+        <div class="drop" id="drop">
+          <div class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m8 11 4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></div>
+          <div class="dt" id="dropTitle">Drop a dataset</div>
+          <div class="dd" id="dropDesc">or pick a sample below</div>
+        </div>
+
+        <div class="samples">
+          <div class="lab">Sample datasets</div>
+          <div class="sample-chips" id="sampleChips"></div>
+        </div>
+
+        <div class="target-pick" id="targetPick" style="display:none;">
+          <div class="lab">Columns · target marked, identifiers dropped</div>
+          <div class="cols" id="cols"></div>
+        </div>
+
+        <div class="run-bar">
+          <button class="btn btn-primary" id="runBtn" disabled style="opacity:.5;cursor:not-allowed;">
+            Train Models
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="card results reveal d1">
+        <!-- empty -->
+        <div class="res-empty" id="resEmpty">
+          <div>
+            <div class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-6M22 20H2"/></svg></div>
+            <p>Pick a sample and click Train Models. The leaderboard, plots, and a plain read will land here.</p>
+          </div>
+        </div>
+
+        <!-- progress -->
+        <div class="progress hidden" id="progress">
+          <div class="prog-inner">
+            <div class="prog-steps" id="progSteps">
+              <div class="prog-step" data-i="0"><span class="ps-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17.5 19 7"/></svg></span>Detecting the task type</div>
+              <div class="prog-step" data-i="1"><span class="ps-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17.5 19 7"/></svg></span>Holding back a test split</div>
+              <div class="prog-step" data-i="2"><span class="ps-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17.5 19 7"/></svg></span>Training a set of models</div>
+              <div class="prog-step" data-i="3"><span class="ps-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17.5 19 7"/></svg></span>Ranking against a baseline</div>
+            </div>
+            <div class="prog-track"><div class="prog-fill" id="progFill"></div></div>
+            <div class="prog-cap" id="progCap">running locally, no requests</div>
+          </div>
+        </div>
+
+        <!-- results body -->
+        <div class="res-body hidden" id="resBody"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ CLOSING CTA ════════════════════ -->
+<section class="cta-band band-cream">
+  <div class="wrap">
+    <div class="cta-card reveal">
+      <div class="glow" style="width:26rem;height:26rem;background:rgba(255,191,0,0.2);top:-8rem;left:50%;transform:translateX(-50%);"></div>
+      <h2>Bring a dataset. Keep it on your machine.</h2>
+      <p>Drop a file, pick what to predict, and read the results in a few seconds. Nothing leaves the browser.</p>
+      <div class="hero-cta" style="margin-top:32px;">
+        <a class="btn btn-primary" href="#try">
+          Open ML Lab
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ FOOTER ════════════════════ -->
+<footer>
+  <div class="wrap foot-inner">
+    <a class="brandmark" href="#top">
+      <img src="logo.svg" alt="quantifAI" style="width:30px;height:30px;" />
+      <span class="wordmark" style="font-size:18px;">quantif<span class="ai">AI</span></span>
+    </a>
+    <div class="foot-links">
+      <a href="#how">How it works</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#specs">Specs</a>
+      <a href="#try">Open ML Lab</a>
+    </div>
+    <div class="foot-copy">© 2026 quantifAI · ML Lab</div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

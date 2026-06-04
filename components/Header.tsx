@@ -29,9 +29,10 @@ const Header = () => {
   }, [mobileMenuOpen])
 
   const navItems = [
-    { name: 'The Problem', href: '#problem' },
-    { name: 'The Workflow', href: '#workflow' },
-    { name: 'Demo', href: '#demo' },
+    { name: 'How it works', href: '#how' },
+    { name: 'Privacy', href: '#privacy' },
+    { name: 'Specs', href: '#specs' },
+    { name: 'Demo', href: '#try' },
   ]
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -101,15 +102,9 @@ const Header = () => {
           <div className="flex items-center gap-2 sm:gap-3">
             <Link
               href="https://app.quantifai.co/login"
-              className="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold text-ink-soft hover:text-ink transition-colors duration-200"
+              className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 bg-brand text-ink font-bold text-sm rounded-full shadow-glow hover:shadow-glow-lg hover:scale-[1.03] transition-all duration-300"
             >
-              Log In
-            </Link>
-            <Link
-              href="https://app.quantifai.co/signup"
-              className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-brand text-ink font-bold text-sm rounded-full shadow-glow hover:shadow-glow-lg hover:scale-[1.03] transition-all duration-300"
-            >
-              Start Building
+              Login
               <ArrowRight className="w-4 h-4" />
             </Link>
 
@@ -160,20 +155,13 @@ const Header = () => {
                     {item.name}
                   </motion.a>
                 ))}
-                <div className="pt-3 pb-2 space-y-3">
+                <div className="pt-3 pb-2">
                   <Link
                     href="https://app.quantifai.co/login"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block w-full text-center px-6 py-3 border border-outline-soft text-ink font-semibold rounded-full hover:bg-surface-low transition-all duration-300"
-                  >
-                    Log In
-                  </Link>
-                  <Link
-                    href="https://app.quantifai.co/signup"
-                    onClick={() => setMobileMenuOpen(false)}
                     className="block w-full text-center px-6 py-3 bg-brand text-ink font-bold rounded-full shadow-glow transition-all duration-300"
                   >
-                    Start Building
+                    Login
                   </Link>
                 </div>
               </nav>
