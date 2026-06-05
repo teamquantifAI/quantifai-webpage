@@ -267,6 +267,18 @@ const MLLabSections = () => {
               </div>
             </div>
           </div>
+
+          {/* Roadmap teaser — pushing the envelope above */}
+          <div className="roadmap reveal">
+            <span className="rm-pill"><span className="dot" />On the roadmap</span>
+            <h3>More updates coming soon.</h3>
+            <p>We&apos;re widening the envelope — bigger datasets, more model types, and faster runs, all still in your browser.</p>
+            <div className="rm-chips">
+              {['GPU acceleration', 'Larger datasets', 'More model types', 'Model export', 'Shareable reports'].map((c) => (
+                <span className="rm-chip" key={c}><span className="soon" />{c}</span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </>

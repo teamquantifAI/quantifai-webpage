@@ -539,3 +539,26 @@
   .mllab .res-cols {grid-template-columns: 1fr;}
   .mllab .cta-card {padding: 52px 24px;}
 }
+
+/* ── Roadmap teaser (added under Specs cards) ── */
+.mllab .roadmap { margin-top: 52px; text-align: center; }
+.mllab .rm-pill {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: rgba(255, 191, 0, 0.15); color: var(--brand-ink);
+  padding: 7px 15px; border-radius: 999px;
+  font-family: var(--font-mono); font-weight: 600; font-size: 12px;
+  text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: 18px;
+}
+.mllab .roadmap h3 { font-size: clamp(24px, 3vw, 32px); line-height: 1.12; }
+.mllab .roadmap > p { margin: 14px auto 0; max-width: 540px; font-size: 16px; color: var(--ink-soft); line-height: 1.6; }
+.mllab .rm-chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 26px; }
+.mllab .rm-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: 12.5px; color: var(--ink-soft);
+  background: rgba(255, 248, 242, 0.55);
+  border: 1.5px dashed var(--outline-soft); border-radius: 999px;
+  padding: 9px 16px;
+  transition: transform 0.2s, border-color 0.2s, color 0.2s, background 0.2s;
+}
+.mllab .rm-chip:hover { transform: translateY(-2px); border-color: var(--brand-dim); color: var(--brand-deep); background: var(--surface-low); }
+.mllab .rm-chip .soon { width: 6px; height: 6px; border-radius: 50%; background: var(--brand-dim); flex: none; }
