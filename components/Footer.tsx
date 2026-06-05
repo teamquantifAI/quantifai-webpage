@@ -41,8 +41,8 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-sm text-ink-soft leading-relaxed max-w-xs">
-              Build, evaluate, and ship ML models you can trust. The AI writes the code,
-              you bring the understanding.
+              Train models on your own data, right in your browser. Your file never leaves
+              the device, and every run is scored against a naive baseline.
             </p>
           </div>
 
@@ -87,7 +87,7 @@ const Footer = () => {
               <Linkedin className="w-5 h-5" />
             </Link>
             <p className="text-sm text-ink-soft leading-relaxed">
-              Built on real, messy data. Honest evaluation on every model.
+              Runs locally, nothing uploaded. Honest evaluation on every model.
             </p>
           </div>
         </div>
