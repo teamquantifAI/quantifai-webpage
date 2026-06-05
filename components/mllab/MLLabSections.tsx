@@ -64,8 +64,8 @@ const MLLabSections = () => {
     <>
       {/* ════ HERO ════ */}
       <section className="hero band-cream mllgrid" id="top">
-        <div className="glow" style={{ width: '40rem', height: '40rem', background: 'rgba(255,191,0,0.16)', top: '-12rem', right: '-6rem' }} />
-        <div className="glow" style={{ width: '22rem', height: '22rem', background: 'rgba(236,193,101,0.18)', top: '14rem', left: '-8rem' }} />
+        <div className="glow" style={{ width: '44rem', height: '44rem', background: 'rgba(255,191,0,0.24)', top: '-12rem', right: '-6rem' }} />
+        <div className="glow" style={{ width: '24rem', height: '24rem', background: 'rgba(236,193,101,0.26)', top: '14rem', left: '-8rem' }} />
         <div className="wrap">
           <div className="hero-grid">
             <div>
@@ -289,7 +289,7 @@ export const MLLabClosingCTA = () => (
   <section className="cta-band band-cream">
     <div className="wrap">
       <div className="cta-card reveal">
-        <div className="glow" style={{ width: '26rem', height: '26rem', background: 'rgba(255,191,0,0.2)', top: '-8rem', left: '50%', transform: 'translateX(-50%)' }} />
+        <div className="glow" style={{ width: '28rem', height: '28rem', background: 'rgba(255,191,0,0.28)', top: '-8rem', left: '50%', transform: 'translateX(-50%)' }} />
         <h2>Bring a dataset. Keep it on your machine.</h2>
         <p>Drop a file, pick what to predict, and read the results in a few seconds. Nothing leaves the browser.</p>
         <div className="hero-cta" style={{ marginTop: '32px' }}>

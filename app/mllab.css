@@ -91,8 +91,8 @@
 .mllab .btn-sm {padding: 10px 18px; font-size: 14px;}
 .mllab section {position: relative;}
 .mllab .band-cream {background: var(--cream);}
-.mllab .band-surface {background: var(--surface);}
-.mllab .band-low {background: var(--surface-low);}
+.mllab .band-surface {background: #fdf4e7;}
+.mllab .band-low {background: #fbe9d0;}
 .mllab .section-pad {padding: 96px 0;}
 .mllab .eyebrow {color: var(--brand-ink); margin-bottom: 16px;}
 .mllab .section-head {max-width: 680px;}
@@ -167,8 +167,8 @@
   font-size: 12px;
   color: var(--muted);
   letter-spacing: 0.02em;}
-.mllab .card {background: #ffffff;
-  border: 1px solid rgba(212, 197, 171, 0.55);
+.mllab .card {background: #fffaf2;
+  border: 1px solid rgba(212, 197, 171, 0.7);
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);}
 .mllab .lift {transition: transform 0.3s cubic-bezier(.2,.7,.3,1), box-shadow 0.3s;}
@@ -178,7 +178,7 @@
   justify-content: space-between;
   padding: 12px 16px;
   border-bottom: 1px solid rgba(212, 197, 171, 0.55);
-  background: rgba(254, 242, 225, 0.6);
+  background: rgba(255, 191, 0, 0.08);
   border-radius: var(--radius) var(--radius) 0 0;}
 .mllab .win-head .title {font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-soft); letter-spacing: 0.04em;}
 .mllab .dots {display: flex; gap: 6px;}
@@ -217,7 +217,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 22px;}
-.mllab .step {background: #fff;
+.mllab .step {background: #fffaf2;
   border: 1px solid rgba(212, 197, 171, 0.55);
   border-radius: var(--radius);
   padding: 28px 24px;
@@ -363,7 +363,7 @@
 .mllab .sample {font-family: var(--font-mono);
   font-size: 12px;
   color: var(--ink);
-  background: #fff;
+  background: #fffaf2;
   border: 1px solid var(--outline-soft);
   border-radius: 8px;
   padding: 7px 11px;
@@ -399,7 +399,7 @@
 .mllab .res-empty .ri {color: var(--brand-dim); margin-bottom: 16px;}
 .mllab .res-empty .ri svg {width: 44px; height: 44px;}
 .mllab .res-empty p {color: var(--ink-soft); font-size: 15px; max-width: 280px;}
-.mllab .progress {position: absolute; inset: 0; display: grid; place-items: center; padding: 40px; background: #fff;}
+.mllab .progress {position: absolute; inset: 0; display: grid; place-items: center; padding: 40px; background: #fffaf2;}
 .mllab .progress.hidden, .mllab .res-empty.hidden, .mllab .res-body.hidden {display: none;}
 .mllab .prog-inner {width: 100%; max-width: 360px;}
 .mllab .prog-steps {display: flex; flex-direction: column; gap: 14px; margin-bottom: 26px;}
