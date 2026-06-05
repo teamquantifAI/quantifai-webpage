@@ -76,7 +76,6 @@ const MLLabSections = () => {
                 <LoginBtn />
                 <a className="btn btn-ghost" href="#how">See how it works</a>
               </div>
-              <p className="hero-note" style={{ marginTop: '22px' }}>No upload. No account needed to try a run. Your file stays on your device.</p>
             </div>
 
             {/* Result preview card */}
